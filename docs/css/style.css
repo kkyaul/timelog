@@ -8,8 +8,8 @@
   --border:  #1a2530;
   --border2: #243040;
   --text:    #b8cdd9;
-  --dim:     #3d5568;
-  --dim2:    #253340;
+  --dim:     #8aabbe;
+  --dim2:    #5a7a8e;
   --accent:  #00e5cc;
   --accent2: #00a896;
   --accent3: rgba(0,229,204,.08);
@@ -53,8 +53,8 @@ body::before {
 }
 
 /* ─── ICONS ─────────────────────────────────────────────────────────────── */
-.icon    { width:14px; height:14px; flex-shrink:0; display:block; }
-.icon-lg { width:16px; height:16px; flex-shrink:0; display:block; }
+.icon    { width:14px; height:14px; flex-shrink:0; display:block; stroke:var(--dim); fill:none; }
+.icon-lg { width:16px; height:16px; flex-shrink:0; display:block; stroke:var(--dim); fill:none; }
 
 /* ─── UTILS ─────────────────────────────────────────────────────────────── */
 .hidden { display: none !important; }

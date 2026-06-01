@@ -20,8 +20,8 @@ const ICON = {
 const FIELDS = ["sleep", "work", "english", "violin", "reading", "exercise", "waste"];
 
 // ─── SVG 아이콘 헬퍼 ──────────────────────────────────────────────────────
-function icon(id, cls = "icon") {
-  return `<svg class="${cls}"><use href="#${id}"/></svg>`;
+function icon(id, cls = "icon", color = "") {
+  return `<svg class="${cls}"${color ? ` style="stroke:${color}"` : ""}><use href="#${id}"/></svg>`;
 }
 
 // ─── 뷰 전환 ──────────────────────────────────────────────────────────────
@@ -80,7 +80,7 @@ function rowHTML(r, isToday) {
     const val = r[f] && r[f] !== "0:00" ? r[f] : null;
     return `
       <div class="lg-cell ${val ? "has-data" : "empty"}">
-        ${icon(ICON[f])}
+        ${icon(ICON[f], "icon", val ? `var(--${f})` : "")}
         <span class="lg-val" style="${val ? `color:var(--${f})` : ""}">${val || "—"}</span>
       </div>`;
   }).join("");
