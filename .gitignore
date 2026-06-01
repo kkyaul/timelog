@@ -1,0 +1,4 @@
+functions/.env
+functions/node_modules/
+auth-helper/node_modules/
+auth-helper/
